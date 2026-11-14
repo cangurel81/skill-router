@@ -1,5 +1,9 @@
 # skill-router
 
+[![test](https://github.com/cangurel81/skill-router/actions/workflows/test.yml/badge.svg)](https://github.com/cangurel81/skill-router/actions/workflows/test.yml)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![node](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](package.json)
+
 Index, classify and search a large agent-skill catalogue — so the agent stops guessing which of
 your 900 skills applies, and so you notice when most of the catalogue is duplicated.
 
@@ -48,7 +52,7 @@ Pick one. All three are the same three files.
 **Clone and run directly**
 
 ```bash
-git clone https://github.com/<you>/skill-router.git
+git clone https://github.com/cangurel81/skill-router.git
 cd skill-router
 node bin/skill-router.mjs
 ```
@@ -73,7 +77,7 @@ domain, search two or three words, read the path, then open only the winner.
 **Copy the script**
 
 ```bash
-curl -O https://raw.githubusercontent.com/<you>/skill-router/main/bin/skill-router.mjs
+curl -O https://raw.githubusercontent.com/cangurel81/skill-router/main/bin/skill-router.mjs
 node skill-router.mjs --root ~/.claude/skills --search testing
 ```
 
