@@ -1,0 +1,32 @@
+{
+  "name": "skill-router",
+  "version": "1.0.0",
+  "description": "Index, classify and search a large agent-skill catalogue. Answers \"which skill fits this job?\" and reports catalogue bloat caused by duplicated locale trees.",
+  "type": "module",
+  "bin": {
+    "skill-router": "bin/skill-router.mjs"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "agent",
+    "skills",
+    "claude-code",
+    "opencode",
+    "codex",
+    "tooling",
+    "cli"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/skill-router.mjs",
+    "test": "node --check bin/skill-router.mjs && node test/smoke.mjs"
+  }
+}
