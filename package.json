@@ -1,5 +1,5 @@
 {
-  "name": "skill-router",
+  "name": "@cangurel81/skill-router",
   "version": "1.0.0",
   "description": "Index, classify and search a large agent-skill catalogue. Answers \"which skill fits this job?\" and reports catalogue bloat caused by duplicated locale trees.",
   "type": "module",
@@ -15,13 +15,27 @@
   "keywords": [
     "agent",
     "skills",
+    "skill-router",
     "claude-code",
     "opencode",
     "codex",
+    "ai-agents",
     "tooling",
     "cli"
   ],
   "license": "MIT",
+  "author": "Can Gürel (https://webadhere.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cangurel81/skill-router.git"
+  },
+  "homepage": "https://github.com/cangurel81/skill-router#readme",
+  "bugs": {
+    "url": "https://github.com/cangurel81/skill-router/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=18"
   },

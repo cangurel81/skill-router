@@ -1,6 +1,7 @@
 # skill-router
 
 [![test](https://github.com/cangurel81/skill-router/actions/workflows/test.yml/badge.svg)](https://github.com/cangurel81/skill-router/actions/workflows/test.yml)
+[![npm](https://img.shields.io/npm/v/@cangurel81/skill-router.svg)](https://www.npmjs.com/package/@cangurel81/skill-router)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![node](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](package.json)
 
@@ -10,7 +11,7 @@ your 900 skills applies, and so you notice when most of the catalogue is duplica
 Zero dependencies. Node 18+. One file. No config required.
 
 ```bash
-node bin/skill-router.mjs --search expo
+npx @cangurel81/skill-router --search expo
 ```
 
 ---
@@ -47,7 +48,21 @@ It never edits, deletes or installs anything. It reads and reports.
 
 ## Install
 
-Pick one. All three are the same three files.
+Pick one. They all run the same three files.
+
+**npm — recommended**
+
+```bash
+npx @cangurel81/skill-router --root ~/.claude/skills --search testing   # no install
+npm i -g @cangurel81/skill-router                                       # global command
+```
+
+The package installs the command `skill-router`, so after a global install you can drop the
+`npx @cangurel81/` prefix:
+
+```bash
+skill-router --search expo
+```
 
 **Clone and run directly**
 
