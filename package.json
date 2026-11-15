@@ -1,6 +1,6 @@
 {
   "name": "@cangurel81/skill-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Index, classify and search a large agent-skill catalogue. Answers \"which skill fits this job?\" and reports catalogue bloat caused by duplicated locale trees.",
   "type": "module",
   "bin": {
