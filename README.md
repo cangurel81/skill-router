@@ -72,6 +72,11 @@ cd skill-router
 node bin/skill-router.mjs
 ```
 
+**Release archive — no npm, no git**
+
+[skill-router.zip](https://github.com/cangurel81/skill-router/releases/latest/download/skill-router.zip)
+is the same three files, zipped. Unpack it and run `node skill-router/bin/skill-router.mjs`.
+
 **Use as an agent skill**
 
 Register the repo's `skills/` folder as a skill root, in whichever harness you use:
