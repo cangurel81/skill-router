@@ -96,6 +96,11 @@ curl -O https://raw.githubusercontent.com/cangurel81/skill-router/main/bin/skill
 node skill-router.mjs --root ~/.claude/skills --search testing
 ```
 
+**Release archive**
+
+Every tag attaches the same three files as a zip — see
+[releases](https://github.com/cangurel81/skill-router/releases/latest).
+
 ## Usage
 
 ```bash
