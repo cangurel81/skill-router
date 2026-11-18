@@ -6,20 +6,31 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   smoke:
     runs-on: ${{ matrix.os }}
+    # A job that never starts is a failed run, not a pending one. Without this
+    # a starved runner sits for 15 minutes and the whole run reports failure.
+    timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        # macOS runners queue for 15 minutes and get cancelled before a single
+        # step runs. This is plain Node with no platform-specific code, so
+        # Linux and Windows cover the matrix without that wait.
+        os: [ubuntu-latest, windows-latest]
         node: [18, 20, 22]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}
-      - name: Syntax check
-        run: node --check bin/skill-router.mjs
-      - name: Smoke test
-        run: node test/smoke.mjs
+      - name: Test
+        run: npm test
+      - name: Packaging check
+        # Verifies the "files" allow-list still ships the bin, the catalogue
+        # and the docs, so a broken publish is caught here and not on npm.
+        run: npm pack --dry-run
